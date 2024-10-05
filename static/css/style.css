@@ -1,15 +1,7 @@
 * {
     box-sizing: border-box;
 }
-.logo-container {
-    text-align: center; /* Center the logo horizontally */
-    margin-bottom: 20px; /* Add some space below the logo */
-}
 
-.logo {
-    width: 150px; /* Adjust the width of the logo */
-    height: auto; /* Ensure the height scales proportionally */
-}
 body {
     font-family: 'Arial', sans-serif;
     background-color: #1e1e2f;
