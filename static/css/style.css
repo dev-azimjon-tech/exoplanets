@@ -111,3 +111,31 @@ button {
 button:hover {
     background-color: #40e36b;
 }
+
+
+.card-container {
+    display: flex;
+    justify-content: center; /* Centers cards horizontally */
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+    gap: 20px; /* Adds space between the cards */
+}
+
+.card_video_a, .card_video_b, .card_video_c {
+    width: 350px; /* Set width */
+    height: 500px; /* Set height */
+    background-color: rgba(128, 128, 128, 0.521);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow */
+    border-radius: 10px; /* Optional: Adds border radius */
+}
+
+.card_video_c {
+    width: 350px; /* Set width */
+    height: 500px; /* Set height */
+    background-color: rgba(128, 128, 128, 0.521);
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow */
+    border-radius: 10px; /* Optional: Adds border radius */
+    float: right;
+    margin-top: -0.3%;
+}
+
