@@ -13,7 +13,7 @@ quizzes = {
         ]
     }
 }
-
+print("Hello world!")
 # Home page
 @app.route('/')
 def home():
