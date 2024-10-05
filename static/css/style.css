@@ -139,3 +139,31 @@ button:hover {
     margin-top: -0.3%;
 }
 
+
+.card_a{
+    width: 350px;
+    height: 500px;
+    float: left;
+    background-color: rgba(128, 128, 128, 0.521);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow */
+    border-radius: 10px; /* Optional: Adds border radius */
+}
+.card_b{
+    width: 350px;
+    height: 500px;
+    float: right;
+    margin-top: -0.1%;
+    background-color: rgba(128, 128, 128, 0.521);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow */
+    border-radius: 10px; /* Optional: Adds border radius */
+}
+
+.card_a:hover{
+    background-color: gray;
+    transition: 0.5s;
+}
+
+.card_b:hover{
+    background-color: gray;
+    transition: 0.5s;
+}
