@@ -1,7 +1,15 @@
 * {
     box-sizing: border-box;
 }
+.logo-container {
+    text-align: center; /* Center the logo horizontally */
+    margin-bottom: 20px; /* Add some space below the logo */
+}
 
+.logo {
+    width: 150px; /* Adjust the width of the logo */
+    height: auto; /* Ensure the height scales proportionally */
+}
 body {
     font-family: 'Arial', sans-serif;
     background-color: #1e1e2f;
@@ -144,6 +152,7 @@ button:hover {
     width: 350px;
     height: 500px;
     float: left;
+    margin-left: 20%;
     background-color: rgba(128, 128, 128, 0.521);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow */
     border-radius: 10px; /* Optional: Adds border radius */
@@ -152,6 +161,7 @@ button:hover {
     width: 350px;
     height: 500px;
     float: right;
+    margin-right: 23%;
     margin-top: -0.1%;
     background-color: rgba(128, 128, 128, 0.521);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow */
@@ -166,4 +176,34 @@ button:hover {
 .card_b:hover{
     background-color: gray;
     transition: 0.5s;
+}
+
+.card_video_a:hover, .card_video_b:hover, .card_video_c:hover {
+    background-color: gray;
+    transition: 0.5s;
+}
+
+/* General styles for the link buttons */
+a.button-link {
+    display: inline-block;
+    padding: 10px 20px; /* Add padding to make it look like a button */
+    background-color: #007BFF; /* Background color of the button */
+    color: white; /* Text color */
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Make the text bold */
+    font-size: large;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect */
+a.button-link:hover {
+    background-color: #0056b3; /* Change background on hover */
+    cursor: pointer;
+}
+
+/* Additional active state (when clicking) */
+a.button-link:active {
+    background-color: #00408d; /* Darker shade when the button is active */
 }
