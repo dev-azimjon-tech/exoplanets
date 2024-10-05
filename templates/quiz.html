@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ quiz_name }}</h2>
+<form method="post">
+    {% for i, question in enumerate(questions) %}
+        <div class="quiz-container">
+            <h3>{{ question.question }}</h3>
+            {% for j, option in enumerate(question.options) %}
+                <input type="radio" name="question-{{ i }}" value="{{ j }}" id="q{{ i }}-o{{ j }}">
+                <label for="q{{ i }}-o{{ j }}">{{ option }}</label><br>
+            {% endfor %}
+        </div>
+    {% endfor %}
+    <button type="submit">Submit Quiz</button>
+</form>
+{% endblock %}
