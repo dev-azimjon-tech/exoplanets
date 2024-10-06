@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
+import random  # Make sure to import random for planet generation
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -87,6 +88,56 @@ def submit_form():
     if request.method == 'POST':
         data = request.form
         return redirect(url_for('library'), data)
+
+# Route to generate planet
+@app.route('/generate_planet', methods=['POST'])
+def generate_planet():
+    data = request.get_json()
+    weight = float(data['weight'])
+    surface = data['surface']
+    atmosphere = data['atmosphere']
+    
+    planet_data = generate_planet_data(weight, surface, atmosphere)
+    
+    return jsonify({
+        'name': data['name'],
+        'temperature': planet_data['temperature'],
+        'gravity': planet_data['gravity'],
+        'surface_color': planet_data['surface_color'],
+        'atmosphere_color': planet_data['atmosphere_color']
+    })
+
+# Route to create your own planet
+@app.route('/create_planet', methods=['GET'])
+def create_planet():
+    return render_template('planet.html')
+
+def generate_planet_data(weight, surface, atmosphere):
+    # Simple logic to generate realistic planet data
+    temperature = round(random.uniform(-100, 100), 2)
+    gravity = round(weight / (random.uniform(1.5, 2.5)), 2)  # Example of gravity calculation
+    
+    surface_colors = {
+        'ocean': '#0077be',     # Blue
+        'desert': '#d2b48c',    # Sandy
+        'forest': '#228B22',    # Green
+        'ice': '#f0f8ff',       # Light blue
+        'volcanic': '#a52a2a'   # Brown
+    }
+    
+    atmosphere_colors = {
+        'none': 'transparent',
+        'o2': 'rgba(135, 206, 235, 0.5)',  # Blue with transparency
+        'co2': 'rgba(255, 99, 71, 0.5)',    # Red with transparency
+        'ch4': 'rgba(154, 205, 50, 0.5)'    # Yellow with transparency
+    }
+    
+    return {
+        'temperature': temperature,
+        'gravity': gravity,
+        'surface_color': surface_colors.get(surface, '#ffffff'),
+        'atmosphere_color': atmosphere_colors.get(atmosphere, 'transparent')
+    }
 
 if __name__ == '__main__':
     app.run(debug=True)

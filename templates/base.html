@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title if title else "Exoplanet Explorer" }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Cosmic Flare</h1>
+        <div class="logo">
+            <h1>🌌 Cosmic Flare</h1>
+        </div>
         <nav>
             <ul>
-                <li><a href="{{ url_for('register') }}">Registration</a></li>
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('library') }}">Library</a></li>
+                <li><a href="{{ url_for('create_planet') }}">Create Planet</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
             </ul>
         </nav>
     </header>
