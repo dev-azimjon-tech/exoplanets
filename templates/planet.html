@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="create-planet-section">
+        <h1>Create Your Own Planet</h1>
+        <form id="planet-form">
+            <label for="name">Planet Name:</label>
+            <input type="text" id="name" required placeholder="Enter planet name">
+            
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" required placeholder="Enter weight">
+            
+            <label for="surface">Surface Type:</label>
+            <select id="surface" required>
+                <option value="ocean">Ocean</option>
+                <option value="desert">Desert</option>
+                <option value="forest">Forest</option>
+                <option value="ice">Ice</option>
+                <option value="volcanic">Volcanic</option>
+            </select>
+            
+            <label for="atmosphere">Atmosphere Type:</label>
+            <select id="atmosphere" required>
+                <option value="none">None</option>
+                <option value="o2">Oxygen (O2)</option>
+                <option value="co2">Carbon Dioxide (CO2)</option>
+                <option value="ch4">Methane (CH4)</option>
+            </select>
+            
+            <button type="submit">Generate Planet</button>
+        </form>
+
+        <div id="planet" class="planet-display"></div>
+        <div id="info" class="planet-info"></div>
+    </section>
+
+    <script>
+        document.getElementById('planet-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const weight = document.getElementById('weight').value;
+            const surface = document.getElementById('surface').value;
+            const atmosphere = document.getElementById('atmosphere').value;
+
+            fetch('/generate_planet', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, weight, surface, atmosphere })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const planetDiv = document.getElementById('planet');
+                planetDiv.style.backgroundColor = data.surface_color;
+                planetDiv.style.borderColor = data.atmosphere_color;
+                
+                document.getElementById('info').innerHTML = `
+                    <h2>${data.name}</h2>
+                    <p>Temperature: ${data.temperature} °C</p>
+                    <p>Gravity: ${data.gravity} m/s²</p>
+                `;
+            });
+        });
+    </script>
+{% endblock %}

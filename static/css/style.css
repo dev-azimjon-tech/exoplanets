@@ -14,7 +14,7 @@ body {
 header {
     background-image: url("/static/logo.png");
     /* background-color: #282a36; */
-    padding-bottom: 20px;
+
     text-align: center;
 }
 
@@ -48,6 +48,7 @@ nav ul li a:hover {
 main {
     background-image: url("/static/logo.png");
     text-align: center;
+    background-image: url("/static/fon1234.jpg");
 }
 
 footer {
