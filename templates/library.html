@@ -48,7 +48,7 @@
     <div class='aboutAuthor'>
       <div class='aboutCont'>
         <!--[ Author Profile Picture, Recommended Sizes: 1280×1280px, 720×720px below 30KB for fast loading, use transparent picture ]-->
-        <img alt='alt_here' src='https://blogger.googleusercontent.com/img/a/AVvXsEhsw7PUP_5frj-mDVttDrduB9YN2e3b1OtO_UswtTwFc2dURIs_nY3qlZEkXNhwguwTEiWc1Fc_MsFP0mqoKOuFfiK0WxvV8dt5cUIi4lko3m_myOE_OhwXN9q4jQhALElk5aOpDIQqmhRfYA2FzhS1Rp0JUdHrxlFpwaY-qpMIUpZyfN6vHTWzJfd-jWQ=s1453' />
+        <img alt='alt_here' src='{{ url_for("static", filename="static/logo.png") }}' />
         <!--[ Author Description ]-->
         <p style="color: black;">One of the most successful methods used by NASA to discover exoplanets is the transit method. This approach involves observing the slight dimming of a star’s light when a planet passes (or "transits") in front of it. NASA’s Kepler Space Telescope was a trailblazer in using this method, and it discovered thousands of exoplanets.</p>
         <div class='athrBtn'>
@@ -214,12 +214,10 @@
     <br><br><br>
     <div class="card-container">
         <div class="card_video_a">
-            <h2>Proxima Centauri b</h2>
-            <h4>About exoplanet Proxima Centauri b: 
+            <h2>Proxima Centauri b</h2><br> <br><br><br>
                 <a class="button-link" href="https://science.nasa.gov/exoplanet-catalog/proxima-centauri-b/" target="_blank">
                     Visit NASA Catalog
-                </a>
-            </h4><br>
+                </a><br><br><br>
             <div class="image-box"><img src="/OIP.jpg" alt=""></div>
         </div>
         
@@ -233,7 +231,9 @@
                 Surface
             </a><br>
             <br>
-            <div class="image-box2"><img src="/OIP.jpg" alt=""></div>
+            <a class="button-link" href="https://science.nasa.gov/exoplanet-catalog/trappist-1-e/" target="_blank">
+              Visit NASA Catalog
+          </a>
         </div>
         
         <div class="card_video_c">
@@ -245,8 +245,11 @@
                 
                 <a class="button-link" href="https://exoplanets.nasa.gov/alien-worlds/exoplanet-travel-bureau/explore-trappist-1d/?travel_bureau=true&intent=021">
                     Surface
-                </a>
-            <div class="image-box3"><img src="/OIP.jpg" alt=""></div>
+                </a><br><br>
+
+                <a class="button-link" href="https://science.nasa.gov/exoplanet-catalog/kepler-452-b/" target="_blank">
+                  Visit NASA Catalog
+              </a>
         </div>
     </div>
     
