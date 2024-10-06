@@ -438,3 +438,13 @@ footer {
 }
 
 
+.comics_b{
+
+    margin-left: 43%;
+    width: 500px;
+    height: 500px;
+}
+.comics_b img{
+    width: 600px;    
+    height: 500px;
+}
