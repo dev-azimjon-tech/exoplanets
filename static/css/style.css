@@ -2,8 +2,10 @@
     box-sizing: border-box;
 }
 
+
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'futura-pt', sans-serif;
     background-color: #1e1e2f;
     color: #f8f8f2;
     margin: 0;
@@ -394,3 +396,45 @@ footer {
     width: 20px;
     height: 20px;
 }
+
+/* General Card Styling */
+.card_video_d, .card_video_e, .card_video_f {
+    width: 350px;                  /* Set the width of each card */
+    height: 500px;                 /* Set the height of each card */
+    background-color: rgba(128, 128, 128, 0.521); /* Background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);     /* Shadow for cards */
+    border-radius: 10px;           /* Rounded corners */
+    display: flex;                 /* Enable flexbox for inner content */
+    flex-direction: column;        /* Stack child elements vertically */
+    justify-content: center;        /* Center the inner content vertically */
+    align-items: center;           /* Center the inner content horizontally */
+    padding: 20px; 
+}
+
+.card_video_d:hover, .card_video_e:hover, .card_video_f:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Styling */
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Title Styling */
+.card_video_d h2, .card_video_e h2, .card_video_f h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Add spacing between cards */
+.card_container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
