@@ -2,17 +2,16 @@
 {% block content %}
 <div class="form-container">
     <form method="post" class="register-form">
+        <h2>Registration</h2>
         <div class="input-group">
-            <h2>Registration</h2>
             <label for="username">Username:</label>
-            <input type="text" name="username" id="username" required>
+            <input type="text" name="username" id="username" class="form-input" required>
         </div>
         <div class="input-group">
             <label for="password">Password:</label>
-            <input type="password" name="password" id="password" required>
+            <input type="password" name="password" id="password" class="form-input" required>
         </div>
-        <button type="submit">Register</button>
+        <button type="submit" class="form-button">Register</button>
     </form>
-    
 </div>
 {% endblock %}
