@@ -2,6 +2,32 @@
     box-sizing: border-box;
 }
 
+/* Logo styling */
+.logo {
+    width: 150px; /* Default width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent the image from exceeding its container's width */
+    transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+/* Optional: Add hover effect for scaling */
+.logo:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+/* Remove list markers (dots or bullets) from navigation list */
+nav ul {
+    list-style-type: none; /* No bullet points */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Space between the items */
+}
+
+nav ul li {
+    display: inline-block;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #1e1e2f;
@@ -26,11 +52,14 @@ header h1 {
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Space between the items */
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline-block;
 }
 
 nav ul li a {
@@ -38,15 +67,18 @@ nav ul li a {
     text-decoration: none;
     font-size: 1.2em;
     transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li img {
+    height: 40px;
+    width: 40px;
 }
 
 nav ul li a:hover {
     color: #50fa7b;
-}
-
-main {
-    padding: 20px;
-    text-align: center;
 }
 
 footer {
@@ -140,30 +172,20 @@ button:hover {
 }
 
 
-.card_a{
-    width: 350px;
-    height: 500px;
-    float: left;
-    margin-left: 20%;
-    background-color: rgba(128, 128, 128, 0.521);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow */
-    border-radius: 10px; /* Optional: Adds border radius */
-}
+
 .card_b{
-    width: 350px;
+    width: 100%;
     height: 500px;
     float: right;
-    margin-right: 23%;
     margin-top: -0.1%;
     background-color: rgba(128, 128, 128, 0.521);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow */
     border-radius: 10px; /* Optional: Adds border radius */
+    font-weight: bolder;
+    font-size: xx-large;
 }
 
-.card_a:hover{
-    background-color: gray;
-    transition: 0.5s;
-}
+
 
 .card_b:hover{
     background-color: gray;
@@ -198,4 +220,132 @@ a.button-link:hover {
 /* Additional active state (when clicking) */
 a.button-link:active {
     background-color: #00408d; /* Darker shade when the button is active */
+}
+
+
+/* General Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e2f;
+    color: #f8f8f2;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #282a36;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #ff79c6;
+}
+
+h2 {
+    color: #ff79c6;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.register-form {
+    background-color: #44475a;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    color: #f8f8f2;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    background-color: #282a36;
+    border: none;
+    border-radius: 5px;
+    color: #f8f8f2;
+    font-size: 1em;
+}
+
+.input-group input:focus {
+    outline: none;
+    background-color: #373c49;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #50fa7b;
+    border: none;
+    border-radius: 5px;
+    color: #282a36;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #40e36b;
+    transition: 0.3s;
+}
+
+/* Footer */
+footer {
+    background-color: #282a36;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    display: flex; /* Align items in a row */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    margin-left: 20px; /* Space between navigation items */
+}
+
+.logo {
+    height: 50px; /* Adjust height as needed */
 }

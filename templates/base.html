@@ -7,30 +7,33 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <header>
-        <h1>Cosmic Flare</h1>
-        <nav>
-            <ul>
-                <li><a href="{{ url_for('register') }}">Register</a></li>
-                <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="{{ url_for('library') }}">Library</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                <div class="flash-messages">
-                    {% for category, message in messages %}
-                        <div class="flash {{ category }}">{{ message }}</div>
-                    {% endfor %}
-                </div>
-            {% endif %}
-        {% endwith %}
-        {% block content %}{% endblock %}
-    </main>
-    <footer>
-        <p>Powered by Cosmic Flare</p>
-    </footer>
+<header>
+    <h1>Cosmic Flare</h1>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}"><img class="logo" src="{{ url_for('static', filename='logo.png') }}" alt="home img"></a></li>
+            <li><a href="{{ url_for('register') }}"><img src="{{ url_for('static', filename='registration.png') }}" alt="register img"></a></li>
+            <li><a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='home.png') }}" alt="home img"></a></li>
+            <li><a href="{{ url_for('library') }}"><img src="{{ url_for('static', filename='telescope.png') }}" alt="telescope img"></a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+</main>
+<footer>
+    <p>Powered by Cosmic Flare</p>
+</footer>
 </body>
 </html>
