@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="logo-container">
-    <img  src="{{ url_for('static', filename='static/logo2.png') }}" alt="Our Logo" class="logo">
+    <img  src="/static/logo2.png" alt="Our Logo" class="logo">
 
 </div>
 
@@ -10,5 +10,13 @@
 <div class="card_b">
     <p>We are thrilled to introduce "Cosmic Flare," an engaging website dedicated to the fascinating world of exoplanets! Our mission is to provide educational materials that inspire curiosity and deepen understanding of these distant worlds through informative articles and engaging quizzes.
         A standout feature of our platform is the opportunity for users to create their own comics using a library of unique exoplanets. With a user-friendly comic creation tool, individuals can craft imaginative stories set in diverse exoplanetary environments. Once completed, users can publish their comics, sharing their creative narratives with a vibrant community of space enthusiasts.</p>
+</div>
+
+<div class="card_video">
+    <video width="100%" height="400" controls>
+        <source style="border-radius: 50px;" src="/static/team_cideo.MOV" type="video/mp4">
+        <!-- <source src="movie.ogg" type="video/ogg"> -->
+        Your browser does not support the video tag
+        </video>
 </div>
 {% endblock %}
